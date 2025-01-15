@@ -806,7 +806,7 @@ figcaption {
     margin-top:40%;
 }
 video{
-	width:100vw;
+	width:100%;
 	height:auto;
 }
 
@@ -871,7 +871,7 @@ iframe{
     margin-right: 10px;
   }
 video{
-	width:100vw;
+	width:100%;
 	height:auto;
 }
 }
@@ -913,7 +913,7 @@ video{
 }
 
 video{
-	width:80vw;
+	width:80%;
 	height:auto;
 }
 	
