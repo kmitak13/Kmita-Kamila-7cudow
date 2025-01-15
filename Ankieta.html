@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Tajemnice" content="7 tajemnic ludzkości" >
+    <meta name="author" content="Kmita Kamila">
+    <meta name="creation-date" content="20.12.2024">
+    <title> Ankieta </title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<section class="formularz" >
+  <h2 class="kolor">Hej! Powiedz, co myślisz o tajemnicach ludzkości?</h2>
+  <form action="mailto:kamila.kmita@tm1.edu.pl" method="post" enctype="text/plain">
+    <label for="imie" class="kolor"> Twoje imię: </label>
+    <input type="text" id="imie" name="Imię" placeholder="Jak masz na imię?" required>
+
+    <label for="email" class="kolor">   Twój e-mail:   </label>
+    <input type="email" id="email" name="Email" placeholder="Podaj swój e-mail, jeśli chcesz nawiązać współpracę lub zostaw puste pole">
+
+    <label for="temat" class="kolor">   Co Cię najbardziej kręci? </label>
+    <select id="temat" name="Temat" required>
+      <option value="" disabled selected  class="kolor"> Wybierz!  </option>
+      <option value="piramidy" class="kolor"> Piramidy   </option>
+      <option value="Tepe" class="kolor">   Göbekli Tepe  </option>
+      <option value="nazca" class="kolor">   Linie Nazca  </option>
+      <option value="wyspa" class="kolor">  Wyspa Wielkanocna  </option>
+      <option value="atlantyda" class="kolor">   Atlantyda  </option>
+      <option value="stonehenge" class="kolor"> Stonehenge </option>
+      <option value="piramidy" class="kolor"> Piramidy  </option>
+    </select>
+
+    <label for="pytanie" class="kolor">  Masz coś do powiedzenia? Śmiało! </label>
+    <textarea id="pytanie" name="Opinia" rows="5" placeholder="Tu wpisz swoje przemyślenia"></textarea>
+
+    <div class="przyciski">
+      <button type="reset">Wyczyść wszystko</button>
+      <button type="submit">Wyślij!</button>
+      </div>
+  </form>
+</section>
+
+
+
+</body>
+</html>
