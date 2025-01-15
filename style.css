@@ -1,0 +1,909 @@
+
+/* ogóły */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header {
+    background-color: #004080;
+    color: #ffffff;
+    text-align: center;
+    position: static;
+    top: 0;
+    z-index: 1000;
+width:100vw;
+}
+
+    .logo h1 {
+      color:#FFFFFF;
+    margin: 0;
+    font-size: 2rem;
+    animation: fadeIn 2s ease-in;
+}
+
+/* nav */
+nav{
+    background-color:#CCBD5A;
+    width:100vw;
+    height:5vh;
+    font-size:100%;
+    letter-spacing:3px;
+    animation: pojawianie-sie 1s forwards;
+}
+nav a{
+    text-decoration:none;
+    color:#003300;
+}
+
+nav a:hover{
+    color:#FFFFFF;
+    background-color:#000000;
+}
+#nav {
+  display: flex;
+  flex-wrap: wrap; /* Pozwala na zawijanie linków do nowego wiersza */
+  justify-content: center; /* Centrowanie linków */
+  background-color: black; /* Domyślne czarne tło */
+  padding: 1rem;
+}
+
+#nav p {
+  margin: 0;
+  width: 100%; /* Aby tło obejmowało całą szerokość */
+  text-align: center; /* Centrowanie tekstu */
+}
+
+#nav a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #333; /* Tło dla linków */
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#nav a:hover {
+  background-color: #555; /* Zmiana koloru po najechaniu */
+}
+
+
+a{
+    text-decoration:underline;
+    color:#003300;
+}
+
+a:hover{
+    color:#FFFFFF;
+    background-color:#000000;
+    font-style:italic;
+}
+/* stopka */
+footer {
+    background-color: #00264d;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+.stopka{
+    font-size:15px;
+}
+
+/*iframe*/
+iframe{
+    width:100vw;
+    height:100vh;
+    margin-top:5%;
+}
+
+/* Kluczowe klatki animacji do logo i linków */
+@keyframes pojawianie-sie {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  do podstron o 7 tajemnicach świata  */
+
+ .zdjecie {
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+.tekstowePoleMP {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+.pMP{
+    font-size:20px;
+    text-align:justify;
+}
+.mapa{
+    width:40vw;
+    height:auto;
+}
+
+    .image {
+      flex: 0 0 720px;
+    height: 200px;
+    aspect-ratio: auto;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+
+/* tabela z autor.html  */
+#tabelaciekawostki {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: 80%;
+    border-color:#000000;
+}
+
+#tabelaciekawostki th, #tabelaciekawostki td {
+    border: 1px solid #ccc; /* Obramowanie komórek */
+    padding: 10px; /* Odstęp wewnętrzny */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+#tabelaciekawostki th {
+    background-color: #3A9DD1; /* Kolor tła nagłówka */
+    color: white; /* Kolor tekstu nagłówka */
+    text-transform: uppercase; /* Wielkie litery w nagłówkach */
+}
+
+#tabelaciekawostki tr {
+    background-color: #A6CFFF ;
+}
+
+/* :nth-child(even)  jeśli chcemy kolorki na zmianę */
+
+
+/* kod do galerii */
+
+
+.galeria {
+  display: flex;
+  align-items: flex-start;
+}
+
+.duze-zdjecie {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
+}
+
+.slajdy {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: zmien-zdjecie 40s infinite;
+}
+
+.slajdy img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.miniaturki {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dwie kolumny o równej szerokości */
+  gap: 10px; /* Odstęp między miniaturkami */
+}
+
+.miniaturka {
+  width: 175px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.miniaturka:hover {
+  border: 2px solid #000;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Animacja zmieniająca zdjęcia */
+@keyframes zmien-zdjecie {
+  0% { transform: translateX(0%); }
+  13.5% { transform: translateX(0%); } /* Zdjęcie 1 */
+  14% { transform: translateX(-100%); }
+  27.5% { transform: translateX(-100%); } /* Zdjęcie 2 */
+  28% { transform: translateX(-200%); }
+  41.5% { transform: translateX(-200%); } /* Zdjęcie 3 */
+  42% { transform: translateX(-300%); }
+  55.5% { transform: translateX(-300%); } /* Zdjęcie 4 */
+  56% { transform: translateX(-400%); }
+  71.5% { transform: translateX(-400%); } /* Zdjęcie 5 */
+  72% { transform: translateX(-500%); }
+  85.5% { transform: translateX(-500%); } /* Zdjęcie 6 */
+  86% { transform: translateX(-600%); }
+  100% { transform: translateX(-600%); } /* Zdjęcie 7 */
+}
+
+
+
+
+
+/* FORMULARZZ */
+
+.formularz {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff5e1;
+  border: 2px dashed #ffc107;
+  border-radius: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularz h2 {
+  text-align: center;
+  color: #3969BB;
+  font-size: 22px;
+}
+
+.kolor{
+  color:#3969BB;
+}
+
+
+.formularz label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff9100;
+  font-weight: bold;
+}
+
+.formularz input,
+.formularz select,
+.formularz textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ffab40;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff8e1;
+}
+
+.formularz textarea {
+  resize: none;
+}
+
+.formularz .przyciski {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formularz button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formularz button[type="submit"] {
+  background: #53EB53;
+  color: #000000;
+}
+
+.formularz button[type="submit"]:hover {
+  background: #aaffaa;
+}
+
+.formularz button[type="reset"] {
+  background: #f44336;
+  color: #fff;
+}
+
+.formularz button[type="reset"]:hover {
+  background: #d32f2f;
+}
+
+
+
+/* RESPONSYWNOŚĆ */
+
+
+/* TELEFONY */
+
+/* ogóły */
+
+    body{
+    background-color:#FFF3AA;
+     text-align:center;
+
+}
+    h1{
+    text-align:center;
+    color:#003300;
+    font-size:300%;
+}
+    header{
+  top: 0;
+animation: pojawianie-sie 1s forwards;
+width:100vw;
+height:15vh;
+justify-content: center;
+align-items: center;
+display: flex;
+
+    }
+
+ol {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style-position: inside;
+            text-align:left;
+        }
+
+
+
+
+nav{
+    background-color:#CCBD5A;
+    width:100vw;
+    height:5vh;
+    font-size:100%;
+    letter-spacing:3px;
+    animation: pojawianie-sie 1s forwards;
+}
+nav a{
+    text-decoration:none;
+    color:#003300;
+}
+
+nav a:hover{
+    color:#FFFFFF;
+    background-color:#000000;
+    font-style:italic;
+}
+
+a{
+    text-decoration:underline;
+    color:#003300;
+}
+
+a:hover{
+    color:#FFFFFF;
+    background-color:#000000;
+    font-style:italic;
+}
+
+article{
+    background-color:#7ee07d;
+    width:100vw;
+    height:75vh;
+    justify-content:center;
+    display: flex;
+	margin-left:20px;
+	margin-right:20px;
+    top:20px;
+}
+
+footer {
+    background-color:#3A9DD2;
+
+    bottom: 0;
+    width: 100vw;
+    height:2%;
+}
+footer p{
+    font-size:90%;
+
+}
+
+
+p {
+  font-size:20px;
+}
+iframe{
+    width:90vw;
+    height:100vh;
+}
+#StronaGlowna{
+    font-size:60px;
+    margin-right:15%;
+    margin-left:15%;
+}
+#StrGloNag{
+    font-size:100px;
+    letter-spacing:5px;
+}
+
+
+#linki{
+  background-color:#3A9DD2;
+  height:8vh;
+  animation: pojawianie-sie 3s forwards;
+}
+
+
+
+
+
+#HdrStrGl{
+    Height:10vh;
+    background: linear-gradient(90deg, #3aa1ef, #97c1e2, #3aa1ef); /* Gradient w poziomie */
+  color: #fff;
+  opacity: 0;
+  animation: pojawianie-sie 2s forwards;
+}
+
+#bodyindex{
+  background-color:#a8d9ff;
+}
+
+/* Kluczowe klatki animacji do logo i linków */
+@keyframes pojawianie-sie {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  do podstron o 7 tajemnicach świata  */
+
+ .zdjecie {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+.tekstowePoleMP {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+.pMP{
+    font-size:20px;
+    text-align:justify;
+}
+.mapa{
+    width:40vw;
+    height:auto;
+}
+
+    .image {
+      flex: 0 0 720px;
+    height: 200px;
+    aspect-ratio: auto;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+
+
+#tabelaciekawostki {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    font-size: 80%;
+    border-color:#000000;
+}
+
+#tabelaciekawostki th, #tabelaciekawostki td {
+    border: 1px solid #ccc; /* Obramowanie komórek */
+    padding: 10px; /* Odstęp wewnętrzny */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+#tabelaciekawostki th {
+    background-color: #3A9DD1; /* Kolor tła nagłówka */
+    color: white; /* Kolor tekstu nagłówka */
+    text-transform: uppercase; /* Wielkie litery w nagłówkach */
+}
+
+#tabelaciekawostki tr {
+    background-color: #A6CFFF ;
+}
+
+/* :nth-child(even)  jeśli chcemy kolorki na zmianę */
+
+
+/* kod do galerii */
+
+
+
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.duze-zdjecie {
+  flex: 2;
+  margin-right: 20px;
+    overflow: hidden;
+  position: relative;
+}
+
+.slajdy img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.miniaturki {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.miniaturka {
+  width: 100%;
+  height: auto;
+  border: 2px solid #d4a373;
+  border-radius: 5px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #6b4226;
+}
+
+.slajdy {
+  display: flex;
+  animation: zmien-zdjecie 40s infinite;
+}
+
+.slajdy img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.miniaturki {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dwie kolumny o równej szerokości */
+  gap: 10px; /* Odstęp między miniaturkami */
+}
+
+.miniaturka {
+  width: 175px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.miniaturka:hover {
+  border: 2px solid #000;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Animacja zmieniająca zdjęcia */
+@keyframes zmien-zdjecie {
+  0% { transform: translateX(0%); }
+  13.5% { transform: translateX(0%); } /* Zdjęcie 1 */
+  14% { transform: translateX(-100%); }
+  27.5% { transform: translateX(-100%); } /* Zdjęcie 2 */
+  28% { transform: translateX(-200%); }
+  41.5% { transform: translateX(-200%); } /* Zdjęcie 3 */
+  42% { transform: translateX(-300%); }
+  55.5% { transform: translateX(-300%); } /* Zdjęcie 4 */
+  56% { transform: translateX(-400%); }
+  71.5% { transform: translateX(-400%); } /* Zdjęcie 5 */
+  72% { transform: translateX(-500%); }
+  85.5% { transform: translateX(-500%); } /* Zdjęcie 6 */
+  86% { transform: translateX(-600%); }
+  100% { transform: translateX(-600%); } /* Zdjęcie 7 */
+}
+
+
+
+
+
+/* FORMULARZZ */
+
+.formularz {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff5e1;
+  border: 2px dashed #ffc107;
+  border-radius: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.kolor{
+  color:#3969BB;
+}
+
+
+.formularz label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff9100;
+  font-weight: bold;
+}
+
+.formularz input,
+.formularz select,
+.formularz textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ffab40;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff8e1;
+}
+
+
+.formularz .przyciski {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formularz button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formularz button[type="submit"] {
+  background: #53EB53;
+  color: #000000;
+}
+
+.formularz button[type="reset"] {
+  background: #f44336;
+  color: #fff;
+}
+
+
+
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 600px) {
+
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    h1{
+      color:#FFFFFF;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+.galeria {
+    flex-direction: column; /* Układ pionowy */
+  }
+
+  .miniaturki {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Miniaturki w dwóch kolumnach */
+  }
+
+  .slajdy img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;}
+
+
+  #nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    padding: 0.5rem;
+    margin-bottom:1rem;
+  }
+   iframe {
+        width: 100%;
+        height: auto;
+        margin-top:1rem;
+    }
+
+
+
+#nav a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
+ .tekstowePoleMP {
+    position: relative;
+    margin-top: 10rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .zdjecie img {
+    width: 80vw;
+    padding:0;
+    display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  float: left;
+    margin-right: 10px;
+  }
+
+  iframe{
+    width:100vw;
+    height:100vh;
+    margin-top:40%;
+}
+
+
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    nav ul {
+        gap: 0.75rem;
+    }
+
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+ .galeria {
+    flex-direction: column; /* Układ pionowy */
+  }
+
+  .miniaturki {
+    display: grid;
+grid-template-columns: repeat(3, 1fr); /* Miniaturki w trzech kolumnach */
+  }
+
+  .slajdy img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+    #nav {
+    background-color: #004080; /* Granatowe tło */
+  }
+
+  #nav a {
+    flex: 1 1 calc(5% - 1rem); /* Linki w dwóch rzędach (każdy rząd po około 4 linki) */
+    text-align: center;
+  }
+#nav p{ font-size:90%;}
+
+
+
+iframe{
+    width:100vw;
+    height:100vh;
+    margin-top:10%;
+}
+
+
+
+
+ .tekstowePoleMP {
+    position: relative; /* Pozwoli dostosować układ */
+    margin-top: 10rem; /* Odstęp od góry */
+    padding: 1rem; /* Odstęp wewnętrzny */
+    background-color: rgba(255, 255, 255, 0.7); /* Półprzezroczyste tło */
+    color: #000000;
+  }
+
+  .zdjecie img {
+    width: 70vw; /* Obraz skalowany do szerokości urządzenia */
+    float: left;
+    margin-right: 10px;
+  }
+
+}
+@media (min-width:1200px){
+
+  .galeria {
+    flex-direction: row;
+  }
+
+
+  .slajdy img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+  #nav p {
+    display: flex; /* Układ linków w jednej linii */
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  #nav {
+    background-color: #004080; /* Granatowe tło */
+  }
+
+  #nav a {
+    flex: 1 1 calc(25% - 1rem); /* Linki w dwóch rzędach (każdy rząd po około 4 linki) */
+    text-align: center;
+  }
+  #nav p{ font-size:100%;}
+
+
+  iframe{
+    width:100vw;
+    height:100vh;
+    margin-top:3%;
+}
+
+}
