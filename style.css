@@ -805,7 +805,10 @@ figcaption {
     height:100vh;
     margin-top:40%;
 }
-
+video{
+	width:100vw;
+	height:auto;
+}
 
 }
 
@@ -867,7 +870,10 @@ iframe{
     float: left;
     margin-right: 10px;
   }
-
+video{
+	width:100vw;
+	height:auto;
+}
 }
 @media (min-width:1200px){
 
@@ -906,4 +912,9 @@ iframe{
     margin-top:3%;
 }
 
+video{
+	width:80vw;
+	height:auto;
+}
+	
 }
