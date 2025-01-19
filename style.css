@@ -86,15 +86,15 @@ a:hover{
     font-style:italic;
 }
 /* stopka */
-footer {
-    background-color: #004080;
+.footer {
+    background-color: #00407F;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
 }
-.stopka{
+footer p{
     font-size:15px;
-    background-color: #004080;
+        background-color: #00407F;
 
 }
 
