@@ -742,6 +742,8 @@ figcaption {
 
 .menu-checkbox {
     display: none; 
+    background-color: #00407E;
+
 }
 
 .menu-label {
@@ -857,9 +859,13 @@ video{
 }
 	   .menu-label {
         display: block; 
-    }
+        background-color: #00407E;
+
+	   }
   .menu-checkbox:checked + .menu-label + #nav {
         display: block; 
+	background-color: #00407E;
+
     }
 
 	
