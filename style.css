@@ -744,6 +744,17 @@ figcaption {
     display: none; 
 }
 
+.menu-label {
+    display: none; /* Domyślnie niewidoczne na dużych ekranach */
+    cursor: pointer;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+
 
 /* RESPONSYWNOŚĆ */
 
@@ -824,11 +835,11 @@ figcaption {
     margin-right: 10px;
   }
 
-   iframe{
-    width:100vw;
-    height:100vh;
-    margin-top:100vh;
-}
+ iframe[name="RamkaIframe"] {
+        margin-top: 10px; /* Odsunięcie iframe od menu */
+        width: 100%; /* Dopasowanie szerokości do ekranu */
+        height: 50vh; /* Dostosowanie wysokości ramki */
+    }
 
 
     #nav p {
