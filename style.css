@@ -666,19 +666,21 @@ figcaption {
   border-radius: 15px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #00407F;
+
 }
 
 
 
 .kolor{
-  color:#3969BB;
+  color:#00407F;
 }
 
 
 .formularz label {
   display: block;
   margin-bottom: 8px;
-  color: #3969BB;
+  color: #00407F;
   font-weight: bold;
 }
 
@@ -692,6 +694,8 @@ figcaption {
   border-radius: 5px;
   font-size: 14px;
   background: #fff8e1;
+  color: #00407F;
+
 }
 
 
