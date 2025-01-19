@@ -87,13 +87,15 @@ a:hover{
 }
 /* stopka */
 footer {
-    background-color: #004080  ;
+    background-color: #004080;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
 }
 .stopka{
     font-size:15px;
+    background-color: #004080;
+
 }
 
 /*iframe*/
