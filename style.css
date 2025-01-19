@@ -748,7 +748,7 @@ figcaption {
     display: none; /* Domyślnie niewidoczne na dużych ekranach */
     cursor: pointer;
     padding: 10px;
-    background-color: #0073e6;
+    background-color: #00407E;
     color: white;
     text-align: center;
     font-size: 16px;
@@ -836,9 +836,9 @@ figcaption {
   }
 
  iframe[name="RamkaIframe"] {
-        margin-top: 10px; /* Odsunięcie iframe od menu */
-        width: 100%; /* Dopasowanie szerokości do ekranu */
-        height: 50vh; /* Dostosowanie wysokości ramki */
+        margin-top: 10px; 
+        width: 100%;
+        height: 50vh; 
     }
 
 
@@ -856,10 +856,10 @@ video{
 	height:auto;
 }
 	   .menu-label {
-        display: block; /* Widoczne tylko na małych ekranach */
+        display: block; 
     }
   .menu-checkbox:checked + .menu-label + #nav {
-        display: block; /* Menu staje się widoczne */
+        display: block; 
     }
 
 	
