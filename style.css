@@ -180,6 +180,17 @@ iframe{
 /* :nth-child(even)  jeśli chcemy kolorki na zmianę */
 
 
+/* Styl dla etykiety przycisku */
+.menu-label {
+    display: none; /* Domyślnie niewidoczne na dużych ekranach */
+    cursor: pointer;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
 /* kod do galerii */
 
 
@@ -726,6 +737,14 @@ figcaption {
 
 
 
+
+
+
+.menu-checkbox {
+    display: none; 
+}
+
+
 /* RESPONSYWNOŚĆ */
 
 @media (max-width: 600px) {
@@ -759,13 +778,12 @@ figcaption {
 
 
   #nav {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: black;
     padding: 0.5rem;
     margin-bottom:1rem;
-  }
+	  display: none;  }
    iframe {
         width: 100%;
         height: auto;
@@ -826,7 +844,14 @@ video{
 	width:100%;
 	height:auto;
 }
+	   .menu-label {
+        display: block; /* Widoczne tylko na małych ekranach */
+    }
+  .menu-checkbox:checked + .menu-label + #nav {
+        display: block; /* Menu staje się widoczne */
+    }
 
+	
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
