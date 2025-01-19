@@ -662,7 +662,7 @@ figcaption {
   margin: 20px auto;
   padding: 15px;
   background: #fff5e1;
-  border: 2px dashed #ffc107;
+  border: 2px solid #ffc107;
   border-radius: 15px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
